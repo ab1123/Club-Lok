@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "422215475796",
+    "project_id": "club-lok-test",
+    "storage_bucket": "club-lok-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422215475796:android:2fc0ccab874cd19e9003c1",
+        "android_client_info": {
+          "package_name": "com.example.club_lok_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422215475796-m19ql7lc4aaopm4uhepqjr4jggsb40f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhX8Elpx9XXYY0zkkmPYHhxhMjjwwajyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422215475796-m19ql7lc4aaopm4uhepqjr4jggsb40f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
