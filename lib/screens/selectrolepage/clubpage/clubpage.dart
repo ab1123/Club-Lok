@@ -63,26 +63,22 @@ class _ClubPage extends State<ClubPage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        child: const Text(
-                          "ABOUT",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+                      const Text(
+                        "ABOUT",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        child: const Text(
-                          "MANAGEMENT",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+                      const Text(
+                        "MANAGEMENT",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                       const SizedBox(
                         width: 10,
@@ -104,24 +100,37 @@ class _ClubPage extends State<ClubPage> {
                       // ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Container(
-                        height: 500,
-                        width: 1000,
-                        color: Colors.grey,
-                        child: const Text(
-                          "ABOUT THE CLUB OR SC",
-                          style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 500,
+                            width: 1000,
+                            color: Colors.grey,
+                            child: const Text(
+                              "ABOUT THE CLUB OR SC",
+                              style: TextStyle(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 100,
+                          ),
+                          Container(
+                            height: 200,
+                            width: 200,
+                            color: Colors.red,
+                          ),
+                        ],
                       ),
                     ),
                   ),

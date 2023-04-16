@@ -1,4 +1,5 @@
-import 'package:club_lok_test/screens/selectrolepage/select_role_page.dart';
+import 'package:club_lok_test/screens/create_account_page/create_account_page.dart';
+import 'package:club_lok_test/screens/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
 
 class TestLogin extends StatefulWidget {
@@ -109,7 +110,7 @@ class _TestLoginState extends State<TestLogin> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const SelectRolePage()),
+                                            const StudentPortalPage()),
                                   );
                                 },
                                 child: const SizedBox(
@@ -139,13 +140,23 @@ class _TestLoginState extends State<TestLogin> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        Text(
-                          "If you don’t remember your password  click here .",
+                      children: [
+                        const Text(
+                          "If you don’t remember your password",
                           style: TextStyle(fontSize: 14, color: Colors.white),
                         ),
-                        Spacer(),
-                        Text(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const CreateAccount()),
+                              );
+                            },
+                            child: const Text("click here")),
+                        const Spacer(),
+                        const Text(
                           "For Creating an Account   click here .",
                           style: TextStyle(fontSize: 14, color: Colors.white),
                         ),

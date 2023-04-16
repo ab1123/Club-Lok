@@ -61,110 +61,106 @@ class _StudentPortalPage extends State<StudentPortalPage> {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                child: Column(
-                  children: [
-                    const Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        child: Text(
-                          "TECHNICAL",
-                          style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+              Column(
+                children: [
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: Text(
+                        "TECHNICAL",
+                        style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     ),
-                    Row(
-                      children: [
-                        const Spacer(),
-                        for (int i = 1; i < 8; i++)
-                          Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ClubPage()),
-                                );
-                              },
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 240,
-                                    width: 200,
-                                    color: Colors.amber,
-                                  ),
-                                  Text(
-                                    "CLUB $i",
-                                    style: const TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                ],
-                              ),
+                  ),
+                  Row(
+                    children: [
+                      const Spacer(),
+                      for (int i = 1; i < 8; i++)
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ClubPage()),
+                              );
+                            },
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 240,
+                                  width: 200,
+                                  color: Colors.amber,
+                                ),
+                                Text(
+                                  "CLUB $i",
+                                  style: const TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ],
                             ),
                           ),
-                        const Spacer(),
-                      ],
-                    )
-                  ],
-                ),
+                        ),
+                      const Spacer(),
+                    ],
+                  )
+                ],
               ),
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                child: Column(
-                  children: [
-                    const Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        child: Text(
-                          "CULTURAL",
-                          style: TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+              Column(
+                children: [
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: Text(
+                        "CULTURAL",
+                        style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     ),
-                    Row(
-                      children: [
-                        const Spacer(),
-                        for (int i = 1; i < 8; i++)
-                          Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: InkWell(
-                              onTap: () {},
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 240,
-                                    width: 200,
-                                    color: Colors.amber,
-                                  ),
-                                  Text(
-                                    "CLUB $i",
-                                    style: const TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                ],
-                              ),
+                  ),
+                  Row(
+                    children: [
+                      const Spacer(),
+                      for (int i = 1; i < 8; i++)
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: InkWell(
+                            onTap: () {},
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 240,
+                                  width: 200,
+                                  color: Colors.amber,
+                                ),
+                                Text(
+                                  "CLUB $i",
+                                  style: const TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ],
                             ),
                           ),
-                        const Spacer(),
-                      ],
-                    )
-                  ],
-                ),
+                        ),
+                      const Spacer(),
+                    ],
+                  )
+                ],
               ),
             ],
           ),
