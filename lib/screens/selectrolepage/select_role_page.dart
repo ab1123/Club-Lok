@@ -1,10 +1,10 @@
 import 'package:club_lok_test/screens/ClubrepPortalPage/clubrep_portal_page.dart';
 import 'package:club_lok_test/screens/login/test_login.dart';
+import 'package:club_lok_test/screens/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
 
 class SelectRolePage extends StatefulWidget {
   const SelectRolePage({super.key});
-
   @override
   State<SelectRolePage> createState() => _HomeState();
 }
@@ -14,7 +14,7 @@ class _HomeState extends State<SelectRolePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: const Color.fromRGBO(23, 25, 78, 1),
+        color: Colors.black,
         child: Column(
           children: [
             const Align(
@@ -24,47 +24,51 @@ class _HomeState extends State<SelectRolePage> {
                 child: Text(
                   "CLUB - LOK",
                   style: TextStyle(
-                      fontSize: 32,
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(225, 0, 0, 1)),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: Text(
+                  "Who's Logging in?",
+                  style: TextStyle(
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
               ),
             ),
             const SizedBox(
-              height: 100,
+              height: 50,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Column(
-                //   children: [
-                //     // Container(
-                //     //   height: 235,
-                //     //   width: 204,
-                //     //   color: Colors.red,
-                //     // ),
-                //     // const SizedBox(
-                //     //   height: 10,
-                //     // ),
-                //     // const Text(
-                //     //   "ADMIN",
-                //     //   style: TextStyle(
-                //     //       fontSize: 24,
-                //     //       fontWeight: FontWeight.bold,
-                //     //       color: Colors.white),
-                //     // ),
-                //   ],
-                // ),
-                // const SizedBox(
-                //   width: 238,
-                // ),
+// ),
                 Column(
                   children: [
                     InkWell(
                         child: Container(
-                          height: 235,
-                          width: 204,
-                          color: Colors.red,
+                          height: 70,
+                          width: 435,
+                          color: const Color.fromARGB(255, 110, 0, 0),
+                          child: const Center(
+                            child: Text(
+                              "CLUB REPRESENTIVE",
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
                         ),
                         onTap: () {
                           Navigator.push(
@@ -74,25 +78,24 @@ class _HomeState extends State<SelectRolePage> {
                                     const ClubrepPortalPage()),
                           );
                         }),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      "CLUB REP.",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
                   ],
                 ),
                 Column(
                   children: [
                     InkWell(
                         child: Container(
-                          height: 235,
-                          width: 204,
-                          color: Colors.red,
+                          height: 70,
+                          width: 435,
+                          color: const Color.fromARGB(255, 110, 0, 0),
+                          child: const Center(
+                            child: Text(
+                              "STUDENT",
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
                         ),
                         onTap: () {
                           Navigator.push(
@@ -101,16 +104,6 @@ class _HomeState extends State<SelectRolePage> {
                                 builder: (context) => const TestLogin()),
                           );
                         }),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      "STUDENT",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
                   ],
                 ),
               ],

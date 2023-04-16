@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class ClubPage extends StatefulWidget {
   const ClubPage({super.key});
-
   @override
   State<ClubPage> createState() => _ClubPage();
 }
@@ -15,7 +14,7 @@ class _ClubPage extends State<ClubPage> {
         child: Stack(
           children: [
             Container(
-              color: const Color.fromRGBO(23, 25, 78, 1),
+              color: Colors.black,
               child: Column(
                 children: [
                   Row(
@@ -27,7 +26,7 @@ class _ClubPage extends State<ClubPage> {
                             Container(
                               height: 250,
                               width: MediaQuery.of(context).size.width,
-                              color: Colors.grey,
+                              color: Color.fromARGB(255, 110, 0, 0),
                               child: const Center(
                                 child: Text(
                                   "BANNER OF THE CLUB",
@@ -63,22 +62,26 @@ class _ClubPage extends State<ClubPage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      const Text(
-                        "ABOUT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Container(
+                        child: const Text(
+                          "ABOUT",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      const Text(
-                        "MANAGEMENT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Container(
+                        child: const Text(
+                          "MANAGEMENT",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
@@ -93,44 +96,31 @@ class _ClubPage extends State<ClubPage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      // Container(
-                      //   height: 200,
-                      //   width: 200,
-                      //   color: Colors.amber,
-                      // ),
+// Container(
+// height: 200,
+// width: 200,
+// color: Colors.amber,
+// ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 500,
-                            width: 1000,
-                            color: Colors.grey,
-                            child: const Text(
-                              "ABOUT THE CLUB OR SC",
-                              style: TextStyle(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 100,
-                          ),
-                          Container(
-                            height: 200,
-                            width: 200,
-                            color: Colors.red,
-                          ),
-                        ],
+                      child: Container(
+                        height: 500,
+                        width: 1000,
+                        color: Colors.grey,
+                        child: const Text(
+                          "ABOUT THE CLUB OR SC",
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
