@@ -72,7 +72,7 @@ class _EditAboutClubPage extends State<EditAboutClubPage> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     child: Column(
                       children: [
@@ -81,17 +81,17 @@ class _EditAboutClubPage extends State<EditAboutClubPage> {
                           width: 270,
                           color: Colors.grey,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Container(
                           color: Colors.white,
-                          child: Text("Name and Position"),
+                          child: const Text("Name and Position"),
                         ),
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     child: Column(
                       children: [
@@ -100,17 +100,17 @@ class _EditAboutClubPage extends State<EditAboutClubPage> {
                           width: 270,
                           color: Colors.grey,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Container(
                           color: Colors.white,
-                          child: Text("Name and Position"),
+                          child: const Text("Name and Position"),
                         ),
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             ],
