@@ -1,3 +1,5 @@
+import 'package:club_lok_test/screens/clubrepPortalPage/edit_about_and_team_page/edit_about_club_page.dart';
+import 'package:club_lok_test/screens/clubrepPortalPage/upload_upcoming_event_page/upload_upcoming_event_page.dart';
 import 'package:club_lok_test/screens/selectrolepage/clubpage/upcomingevents.dart';
 import 'package:flutter/material.dart';
 
@@ -63,12 +65,22 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                       width: 10,
                     ),
                     Container(
-                      child: const Text(
-                        "EDIT ABOUT & MANAGEMENT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const EditAboutClubPage()),
+                          );
+                        },
+                        child: const Text(
+                          "EDIT ABOUT & MANAGEMENT",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -91,10 +103,9 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                           width: 1000,
                           child: Center(
                             child: Column(
-                              children: const [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 170, 0, 0),
+                              children: [
+                                const Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 170, 0, 0),
                                   child: InkWell(
                                     child: Text(
                                       "Edit prior event",
@@ -106,7 +117,15 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                                   ),
                                 ),
                                 InkWell(
-                                  child: Text(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const UploadEventPage()),
+                                    );
+                                  },
+                                  child: const Text(
                                     "Upload new event",
                                     style: TextStyle(
                                         fontSize: 30,
