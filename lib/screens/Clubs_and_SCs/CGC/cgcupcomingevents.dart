@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ACMUpcomingEventPage extends StatefulWidget {
-  const ACMUpcomingEventPage({super.key});
+class CGCUpcomingEventPage extends StatefulWidget {
+  const CGCUpcomingEventPage({super.key});
   @override
-  State<ACMUpcomingEventPage> createState() => _UpcomingEventPage();
+  State<CGCUpcomingEventPage> createState() => _UpcomingEventPage();
 }
 
 _launchURL() async {
@@ -17,7 +17,7 @@ _launchURL() async {
   }
 }
 
-class _UpcomingEventPage extends State<ACMUpcomingEventPage> {
+class _UpcomingEventPage extends State<CGCUpcomingEventPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class _UpcomingEventPage extends State<ACMUpcomingEventPage> {
                             child: Column(
                               children: const [
                                 Text(
-                                  "CS101",
+                                  "WEB DEVLEPMENT WORKSHOP",
                                   style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class _UpcomingEventPage extends State<ACMUpcomingEventPage> {
                                 ),
                                 Spacer(),
                                 Text(
-                                  '''We are glad to announce that DITU ACM SC is organizing CS101. 🤩
+                                  '''We are glad to announce that DITU ACM SC is organizing a 3-day workshop on Web development. 🤩
 
 The 3-day workshop will include an introduction to the concepts of Web Development. We will cover the Front-End concepts of Web Development starting from introduction about HTML, CSS and Java-Script from scratch to intermediate level having the hands-on experience through coding.
 
@@ -97,8 +97,7 @@ Venue- Workshop building seminar hall
                       child: Container(
                         height: 360,
                         width: 260,
-                        child: Image.network(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnPTHZnMDGIiIcB2gfDI2R0wFmpjqCxhBsQ&usqp=CAU"),
+                        color: Colors.grey,
                       ),
                     ),
                   ],

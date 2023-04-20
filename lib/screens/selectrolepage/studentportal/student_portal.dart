@@ -1,4 +1,5 @@
 import 'package:club_lok_test/screens/Clubs_and_SCs/ACM/acmpage.dart';
+import 'package:club_lok_test/screens/Clubs_and_SCs/CGC/cgcpage.dart';
 import 'package:club_lok_test/screens/selectrolepage/clubpage/clubpage.dart';
 import 'package:flutter/material.dart';
 
@@ -118,7 +119,7 @@ class _StudentPortalPage extends State<StudentPortalPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const ACMSCPAGE()),
+                                    builder: (context) => const CGCPAGE()),
                               );
                             },
                             child: Column(

@@ -1,4 +1,5 @@
 import 'package:club_lok_test/screens/clubrepPortalPage/clubrepportal.dart';
+import 'package:club_lok_test/screens/clubrepPortalPage/loginclubrep.dart';
 import 'package:club_lok_test/screens/login/test_login.dart';
 import 'package:club_lok_test/screens/selectrolepage/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +75,7 @@ class _HomeState extends State<SelectRolePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ClubRepPortal()),
+                                builder: (context) => const clubrepTestLogin()),
                           );
                         }),
                   ],

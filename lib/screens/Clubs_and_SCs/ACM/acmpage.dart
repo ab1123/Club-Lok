@@ -62,15 +62,15 @@ class _ClubPage extends State<ACMSCPAGE> {
                     const SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      child: const Text(
-                        "MANAGEMENT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ),
+                    // Container(
+                    //   child: const Text(
+                    //     "MANAGEMENT",
+                    //     style: TextStyle(
+                    //         fontSize: 16,
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Colors.white),
+                    //   ),
+                    // ),
                     const SizedBox(
                       width: 10,
                     ),
