@@ -1,5 +1,5 @@
 import 'package:club_lok_test/screens/selectrolepage/select_role_page.dart';
-import 'package:club_lok_test/screens/studentportal/student_portal.dart';
+import 'package:club_lok_test/screens/selectrolepage/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
 
 class TestLogin extends StatefulWidget {

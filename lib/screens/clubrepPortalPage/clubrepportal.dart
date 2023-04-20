@@ -1,13 +1,13 @@
 import 'package:club_lok_test/screens/selectrolepage/clubpage/upcomingevents.dart';
 import 'package:flutter/material.dart';
 
-class ClubPage extends StatefulWidget {
-  const ClubPage({super.key});
+class ClubRepPortal extends StatefulWidget {
+  const ClubRepPortal({super.key});
   @override
-  State<ClubPage> createState() => _ClubPage();
+  State<ClubRepPortal> createState() => _ClubRepPortal();
 }
 
-class _ClubPage extends State<ClubPage> {
+class _ClubRepPortal extends State<ClubRepPortal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,38 +64,7 @@ class _ClubPage extends State<ClubPage> {
                     ),
                     Container(
                       child: const Text(
-                        "ABOUT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      child: const Text(
-                        "MANAGEMENT",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const UpcomingEventPage()),
-                        );
-                      },
-                      child: const Text(
-                        "UPCOMING EVENTS",
+                        "EDIT ABOUT & MANAGEMENT",
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -120,14 +89,32 @@ class _ClubPage extends State<ClubPage> {
                         child: Container(
                           height: 500,
                           width: 1000,
-                          color: Colors.grey,
-                          child: const Center(
-                            child: Text(
-                              "ABOUT THE CLUB OR SC",
-                              style: TextStyle(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                          child: Center(
+                            child: Column(
+                              children: const [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 170, 0, 0),
+                                  child: InkWell(
+                                    child: Text(
+                                      "Edit prior event",
+                                      style: TextStyle(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  child: Text(
+                                    "Upload new event",
+                                    style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -142,7 +129,7 @@ class _ClubPage extends State<ClubPage> {
                         color: Colors.grey,
                         child: const Center(
                           child: Text(
-                            "LOGO",
+                            "EDIT LOGO",
                             style: TextStyle(
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold,

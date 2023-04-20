@@ -1,5 +1,5 @@
 import 'package:club_lok_test/screens/create_account_page/create_account_page.dart';
-import 'package:club_lok_test/screens/studentportal/student_portal.dart';
+import 'package:club_lok_test/screens/selectrolepage/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccount extends StatefulWidget {
