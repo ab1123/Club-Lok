@@ -1,3 +1,5 @@
+import 'package:club_lok_test/screens/create_account_page/create_account_page.dart';
+import 'package:club_lok_test/screens/create_account_page/forgot_pass_page.dart';
 import 'package:club_lok_test/screens/selectrolepage/select_role_page.dart';
 import 'package:club_lok_test/screens/selectrolepage/studentportal/student_portal.dart';
 import 'package:flutter/material.dart';
@@ -146,15 +148,39 @@ class _TestLoginState extends State<TestLogin> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    Text(
-                      "If you don’t remember your password click here .",
-                      style: TextStyle(fontSize: 14, color: Colors.white),
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ForgotPassPage()),
+                        );
+                      },
+                      child: const Text(
+                        "Forgot password? click here.",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromRGBO(225, 0, 0, 1)),
+                      ),
                     ),
-                    Spacer(),
-                    Text(
-                      "For Creating an Account click here .",
-                      style: TextStyle(fontSize: 14, color: Colors.white),
+                    const Spacer(),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CreateAccount()),
+                        );
+                      },
+                      child: const Text(
+                        "New user? Click here.",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromRGBO(225, 0, 0, 1)),
+                      ),
                     ),
                   ],
                 ),

@@ -31,7 +31,7 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                             color: const Color.fromARGB(255, 110, 0, 0),
                             child: const Center(
                               child: Text(
-                                "BANNER OF THE CLUB",
+                                "UPLOAD BANNER OF THE CLUB",
                                 style: TextStyle(
                                     fontSize: 32,
                                     fontWeight: FontWeight.bold,
