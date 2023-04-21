@@ -104,18 +104,19 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                           child: Center(
                             child: Column(
                               children: [
-                                const Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 170, 0, 0),
-                                  child: InkWell(
-                                    child: Text(
-                                      "Edit prior event",
-                                      style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                  ),
-                                ),
+                                Spacer(),
+                                // const Padding(
+                                //   padding: EdgeInsets.fromLTRB(0, 170, 0, 0),
+                                //   child: InkWell(
+                                //     child: Text(
+                                //       "Edit prior event",
+                                //       style: TextStyle(
+                                //           fontSize: 30,
+                                //           fontWeight: FontWeight.bold,
+                                //           color: Colors.white),
+                                //     ),
+                                //   ),
+                                // ),
                                 InkWell(
                                   onTap: () {
                                     Navigator.push(
@@ -133,6 +134,7 @@ class _ClubRepPortal extends State<ClubRepPortal> {
                                         color: Colors.white),
                                   ),
                                 ),
+                                Spacer(),
                               ],
                             ),
                           ),
