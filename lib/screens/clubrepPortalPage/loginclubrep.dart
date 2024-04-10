@@ -3,6 +3,7 @@ import 'package:club_lok_test/screens/create_account_page/create_account_page.da
 import 'package:club_lok_test/screens/create_account_page/forgot_pass_page.dart';
 import 'package:club_lok_test/screens/selectrolepage/select_role_page.dart';
 import 'package:club_lok_test/screens/selectrolepage/studentportal/student_portal.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 class clubrepTestLogin extends StatefulWidget {
@@ -12,6 +13,9 @@ class clubrepTestLogin extends StatefulWidget {
 }
 
 class _TestLoginState extends State<clubrepTestLogin> {
+  TextEditingController emailCont = TextEditingController();
+  TextEditingController passCont = TextEditingController();
+
   bool? rememberMe = false;
   @override
   Widget build(BuildContext context) {
@@ -51,8 +55,9 @@ class _TestLoginState extends State<clubrepTestLogin> {
                             style: TextStyle(fontSize: 14, color: Colors.white),
                           ),
                           const Spacer(),
-                          const TextField(
-                            decoration: InputDecoration(
+                          TextField(
+                            controller: emailCont,
+                            decoration: const InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
                               border: OutlineInputBorder(),
@@ -64,10 +69,11 @@ class _TestLoginState extends State<clubrepTestLogin> {
                             style: TextStyle(fontSize: 14, color: Colors.white),
                           ),
                           const Spacer(),
-                          const TextField(
+                          TextField(
+                            controller: passCont,
                             obscureText: true,
                             obscuringCharacter: '*',
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
                               border: OutlineInputBorder(),
@@ -109,12 +115,25 @@ class _TestLoginState extends State<clubrepTestLogin> {
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.grey),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const ClubRepPortal()),
-                                    );
+                                    String email = emailCont.text;
+                                    String pass = passCont.text;
+                                    if(!EmailValidator.validate(email)) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(content: Text('Invalid Email'), behavior: SnackBarBehavior.floating));
+                                      return;
+                                    }
+                                    if(email == 'admin@DIT.com' && pass == 'admin') {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ClubRepPortal()),
+                                      );
+                                    } else {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(content: Text('Invalid Credentials'), behavior: SnackBarBehavior.floating));
+                                    }
+
                                   },
                                   child: const SizedBox(
                                     height: 28,
@@ -139,53 +158,6 @@ class _TestLoginState extends State<clubrepTestLogin> {
             ),
             const SizedBox(
               height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(150, 0, 100, 0),
-              child: SizedBox(
-                height: 70,
-                width: 600,
-// color: Colors.yellow,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ForgotPassPage()),
-                        );
-                      },
-                      child: const Text(
-                        "Forgot password? click here.",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(225, 0, 0, 1)),
-                      ),
-                    ),
-                    const Spacer(),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CreateAccount()),
-                        );
-                      },
-                      child: const Text(
-                        "New user? Click here.",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(225, 0, 0, 1)),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

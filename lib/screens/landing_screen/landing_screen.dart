@@ -28,7 +28,7 @@ class _LandingScreenState extends State<LandingScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(100, 250, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(100, 50, 0, 0),
                   child: Container(
                     child: const Text(
                       "CLUB-लोक",
@@ -43,7 +43,7 @@ class _LandingScreenState extends State<LandingScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                   child: Container(
                     child: const Text(
                       "A ONE STOP PLACE FOR ALL THE EVENTS IN DIT",

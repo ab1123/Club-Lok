@@ -101,7 +101,7 @@ class _HomeState extends State<SelectRolePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const TestLogin()),
+                                builder: (context) => const StudentPortalPage()),
                           );
                         }),
                   ],

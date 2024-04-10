@@ -210,11 +210,7 @@ class _TestLoginState extends State<TestLogin> {
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Text(
-                          "Harsheet Sharma - 7031341194",
-                          style: TextStyle(fontSize: 15, color: Colors.white),
-                        ),
-                        Text(
-                          "Dilpreet Kaur - 7733056243",
+                          "8630531665",
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Text(
