@@ -117,12 +117,16 @@ class _TestLoginState extends State<clubrepTestLogin> {
                                   onPressed: () {
                                     String email = emailCont.text;
                                     String pass = passCont.text;
-                                    if(!EmailValidator.validate(email)) {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('Invalid Email'), behavior: SnackBarBehavior.floating));
+                                    if (!EmailValidator.validate(email)) {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(const SnackBar(
+                                              content: Text('Invalid Email'),
+                                              behavior:
+                                                  SnackBarBehavior.floating));
                                       return;
                                     }
-                                    if(email == 'admin@DIT.com' && pass == 'admin') {
+                                    if (email == 'admin@DIT.com' &&
+                                        pass == 'admin') {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -130,14 +134,17 @@ class _TestLoginState extends State<clubrepTestLogin> {
                                                 const ClubRepPortal()),
                                       );
                                     } else {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('Invalid Credentials'), behavior: SnackBarBehavior.floating));
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(const SnackBar(
+                                              content:
+                                                  Text('Invalid Credentials'),
+                                              behavior:
+                                                  SnackBarBehavior.floating));
                                     }
-
                                   },
                                   child: const SizedBox(
                                     height: 28,
-                                    width: 100,
+                                    width: 50,
                                     child: Center(
                                       child: Text(
                                         "Login",
@@ -156,10 +163,42 @@ class _TestLoginState extends State<clubrepTestLogin> {
 //
               ],
             ),
+            Row(
+              children: [
+                const SizedBox(
+                  height: 1,
+                  width: 550,
+                ),
+                const Text(
+                  "New user here? ",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CreateAccount()),
+                    );
+                  },
+                  child: const Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors
+                          .blue, // You can customize the color to make it look like a link
+                      decoration: TextDecoration
+                          .underline, // This makes the text look like a hyperlink
+                    ),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(
               height: 10,
             ),
-            Row(
+            
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(

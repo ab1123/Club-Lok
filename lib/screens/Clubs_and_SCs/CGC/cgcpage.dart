@@ -16,8 +16,8 @@ class _ClubPage extends State<CGCPAGE> {
       body: Stack(
         children: [
           Container(
-            color: Colors.black,
-            child: Column(
+            color: const Color.fromRGBO(0, 0, 0, 1),
+            child: SingleChildScrollView(child:  Column(
               children: [
                 Row(
                   children: [
@@ -139,6 +139,7 @@ class _ClubPage extends State<CGCPAGE> {
               ],
             ),
           ),
+            ),
         ],
       ),
     );
